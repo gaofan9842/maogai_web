@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人中心-天大毛概</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="renderer" content="webkit">
+    <meta name="baidu-site-verification" content="R9XA5lWxu2" />
+     <link rel="shortcut icon" href="images/logo/logo.png" />
+    <meta name="keywords" content="天大毛概">
+    <meta name="description" content="天大毛概">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/build.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/dlzc.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <script language="javascript" type="text/javascript" src="js/popwin2.js"></script> 
+</head>
+
+
+<body>
+<header id="top" role="banner" class="transition">
+
+    <div class="container">
+        <div class="navbar-header transition">
+            <a href="index.html" title="首页"><img src="images/logo/logo2.png" alt="天大毛概" title="首页" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-left" id="jsddm">
+            <li class="nav-news js-show-menu">
+                <a href="#">资讯 <span class="caret"></span></a>
+                <ul>
+                    <li><a href="news_political.html" target="_blank">热点社评</a></li>
+                    <!--                    <li><a href="#" target="_blank">疫情快讯</a></li>-->
+                    <li><a href="news_campus.html" target="_blank">校内快讯</a></li>
+                </ul>
+            </li>
+            <style>
+                #jsddm ul{position: absolute; visibility: hidden; background:#fff; width:250px;  top:60px; left:-50px; z-index:9999; box-shadow:0 1px 15px rgba(18,21,21,.2);padding:10px 5px;}
+                #jsddm ul li{ float:left; width:105px; padding-left:20px; line-height:40px;}
+            </style>
+            <!-- <li class="nav-news"><a href="#" target="_blank">正能量新闻<span class="nums-prompt nums-prompt-topic"></span></a></li> -->
+            <li class="nav-news"><a href="celebrity.html" target="_blank">爱国人物科普</a></li>
+            <li class="nav-news"><a href="patriotic_knowledge.html" target="_blank">爱国知识科普<span class="nums-prompt"></span></a></li>
+            <!-- <li class="nav-news"><a href="#" target="_blank">疫情快讯<em class="nums-prompt"></em></a></li> -->
+            <li class="nav-news"><a href="protection.html" target="_blank">疫情防护科普</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right transition  xiala main_nav">
+            <!-- <li class="app-guide js-app-guide" >
+              <div class="app-guide-box">
+                     <img src="images/1448211685.png">
+                     <div class="app-guide-title">
+                         <span>微信扫一扫</span><br>
+                         <span>下载虎嗅APP</span>
+                     </div>
+                 </div>
+                 <i class="icon icon-sm-phone"></i>APP下载<em class="guide-prompt"></em>
+             </li> -->
+            <!-- <li class="search-li js-show-search-box"><a><i class="icon icon-search "></i></a><span>搜索</span></li> -->
+            <!--            <li class="login-link-box"><a id="login_visible" class="cd-signin">登录</a></li>-->
+            <!--            <li ><a id="sign_visible" class="cd-signup" >注册</a></li>-->
+            <!--            <li ><a id="login_hidden" class="cd-signup" style="visibility: hidden" href="member.html" target="_blank">关于我</a></li>-->
+            <!--            <li><a class="cd-tougao">投稿</a></li>-->
+        </ul>
+    </div>
+    <div id="user_model" class="cd-user-modal">
+        <div class="cd-user-modal-container">
+            <div id="cd-login"> <!-- 登录表单 -->
+                <div class="modal-alert-title">登录虎嗅</div>
+                <div class="register" >
+                    <div class="register-top" id="reg-top"><i><a id="qrcode" href="#"></a></i></div>
+                    <div class="register-con" id="rc">
+                        <div class="login-form username-box " style="margin-top:52px;">
+                            <a class="js-open-sms-login sms-text">短信快捷登录</a>
+                            <label class="login-label transition" >
+                                <input id="login_username" class="login-input" placeholder="手机号／邮箱／虎嗅账号">
+                            </label>
+                            <label class="login-label">
+                                <input id="login_password" class="login-input password" type="password" placeholder="输入6～24位密码">
+                            </label>
+                            <a class="js-label-select label-select-box hide login-label-select text-center"><span class="js-country-user">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                            <!--						<div class="login-operation">-->
+                            <!--                			<label><input id="autologin" type="checkbox">&nbsp;2周内自动登录</label>-->
+                            <!--               				<a href="/user/reset_password" class="js-forget-passward pull-right">忘记密码</a>-->
+                            <!--            			</div>-->
+                            <button class="js-btn-login btn-login" onclick="login()">登&nbsp;录</button>
+                        </div>
+                        <!--        			<div class="js-open-register register-text">极速注册</div>-->
+                        <!--        			<div class="third-box">-->
+                        <!--            			<div class="title"><span>第三方登录</span></div>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-qq"></i></a>-->
+                        <!--            			<a class="js-login-switch"><i class="icon-modal icon-login-wx"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-wb"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-zfb"></i></a>-->
+                        <!--        			</div>-->
+                    </div>
+                </div>
+                <!--			<div class="saoma" id="sm">-->
+                <!--				<div class="qr-code" style="text-align:center">-->
+                <!--                    <div class="title">微信登录</div>-->
+                <!--					<div class="waiting panelContent">-->
+                <!--						<div class="wrp_code"><img class="qrcode lightBorder" src="images/150943753529.png"></div>-->
+                <!--						<div class="info">-->
+                <!--							<div class="status status_browser js_status" id="wx_default_tip">-->
+                <!--			                	<p>请使用微信扫描二维码登录</p>-->
+                <!--                            	<p>"天大毛概"</p>-->
+                <!--			           		 </div>-->
+                <!--						</div>-->
+                <!--					</div>-->
+                <!--                 </div>-->
+                <!--        		<div class="screen-tu" id="screen"></div>-->
+                <!--			</div>-->
+            </div>
+            <div id="cd_login"> <!-- 注册表单 -->
+                <div class="modal-alert-title">&nbsp;</div>
+                <div class="js-open-register register-text">极速注册</div>
+                <div class="user-register-box">
+                    <div class="login-form sms-box">
+
+                        <div class="geetest_login_sms_box" >
+                            <div id="profie" class="gt_holder gt_float" style="touch-action: none;">
+                            </div>
+                        </div>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_name" class="login-input username" placeholder="手机号"></label>
+                        <a class="js-label-select label-select-box text-center"><span class="js-country-sms">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_pass" class="login-input username" placeholder="设置密码"></label>
+
+
+                        <button class="js-btn-sms-login btn-login" onclick="sign()">注&nbsp;册</button>
+                        <p class="card-text" id="sign_info"></p>
+                    </div>
+                    <!--				<div class="js-user-login register-text">已有账号，立即登录</div></div>-->
+                </div>
+                <!--			<a href="#0" class="cd-close-form ">关闭</a>-->
+            </div>
+        </div>
+    </div>
+
+
+
+</header>
+
+
+<div class="placeholder-height"></div>
+
+<h1 class="t-h1">活动-天大毛概</h1>
+<div class="container" id="activity">
+    
+    
+
+    <div class="nav-column">
+        <i class="icon2 icon-calendar"></i>疫情防护专栏
+    </div>
+    <div class="activity-list-warp">
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/protection/xishou.html" target="_blank">"七步洗手法"，你学会了吗？</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/protection/xishou.html" target="_blank"><img src="http://5b0988e595225.cdn.sohucs.com/images/20200131/d23c6078d6ed4f5f9b914e283ee7fb00.jpeg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/protection/xishou.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/protection/xishou.html" target="_blank">"七步洗手法"，你学会了吗？</a>
+                </div>
+                <div class="activity-content">
+                    无论工作、旅途，还是聚会、聚餐，规范洗手都是阻断疾病传播的最有效、简单的方法之一。尤其是新型冠状病毒肺炎的出现，对于洗手，大家一定要认真起来。
+
+                    七步洗手法是医务人员进行操作前的洗手方法，用七步洗手法清洁自己的手，清除手部污物和细菌，预防接触感染，减少传染病的传播。简单记忆口诀为：内外夹弓大立腕。
+                </div>
+            </div>
+        </section>
+
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/protection/kouzhao.html" target="_blank">戴口罩能不能进行剧烈运动？</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/protection/kouzhao.html" target="_blank"><img src="images/protection/kouzhao.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/protection/kouzhao.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/protection/kouzhao.html" target="_blank">戴口罩能不能进行剧烈运动？</a>
+                </div>
+                <div class="activity-content">
+                    随着天气转暖和疫情的缓解，越来越多的人选择到户外舒活筋骨，佩戴口罩仍然是疫情防控的重要措施之一。但不幸的是，部分地区出现了佩戴口罩跑步意外猝死事件，有人怀疑这是戴着口罩进行剧烈运动时缺氧所致。
+                    那么，戴口罩到底能不能进行剧烈运动？戴口罩做运动又应该注意什么呢？
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/protection/daikouzhao.html" target="_blank">疫情防控之口罩篇</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/protection/daikouzhao.html" target="_blank"><img src="images/protection/daikouzhao.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/protection/daikouzhao.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/protection/daikouzhao.html" target="_blank">疫情防控之口罩篇</a>
+                </div>
+                <div class="activity-content">
+                    过去，流感再怎么流行，都鲜少看到民众戴上口罩，如今，新型冠状病毒肺炎让大家警惕了。这一次，大家对于口罩有更深入的认识。然而最重要的是，当大家努力取得口罩后，正确的戴法才是正道。
+                </div>
+            </div>
+        </section>
+            </div>
+
+        </div>
+
+
+<footer class="footer">
+    <div class="modal-backdrop fade in js-modal-backdrop"></div>
+    <div class="container copy-right" >
+        <span >本站由  <a href="#">毛泽东思想和中国特色社会主义理论体系概论 小组</a> 负责维护 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维护意见邮箱 ： 3017218091@tju.edu.cn
+            <!--            &nbsp;<a href="#" target="_blank"><i class="i-wj"></i>京公网安备 11010102001402号</a>&nbsp;&nbsp;&nbsp;<em class="bull-right">本站由</em><i class="icon-aliyun" style="width: 70px;background-size: 100%;left: 7px;"></i><em class="bull-em">提供计算与安全服务</em>-->
+        </span>
+        <div class="footer-icon-list pull-right">
+            <ul class="Qr-codee">
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/weixin_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-wx"></i>
+                </li>
+                </a>
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/app_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-rss"></i></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+<script type="text/javascript" src="js/mouse.js"></script>
+</body>
+</html>

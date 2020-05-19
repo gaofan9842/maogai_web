@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人中心-天大毛概</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="renderer" content="webkit">
+    <meta name="baidu-site-verification" content="R9XA5lWxu2" />
+     <link rel="shortcut icon" href="images/logo/logo.png" />
+    <meta name="keywords" content="天大毛概">
+    <meta name="description" content="天大毛概">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/build.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/dlzc.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <script language="javascript" type="text/javascript" src="js/popwin2.js"></script>
+</head>
+
+
+<body>
+<header id="top" role="banner" class="transition">
+
+    <div class="container">
+        <div class="navbar-header transition">
+            <a href="index.html" title="首页"><img src="images/logo/logo2.png" alt="天大毛概" title="首页" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-left" id="jsddm">
+            <li class="nav-news js-show-menu">
+                <a href="#">资讯 <span class="caret"></span></a>
+                <ul>
+                    <li><a href="news_political.html" target="_blank">热点社评</a></li>
+                    <!--                    <li><a href="#" target="_blank">疫情快讯</a></li>-->
+                    <li><a href="news_campus.html" target="_blank">校内快讯</a></li>
+                </ul>
+            </li>
+            <style>
+                #jsddm ul{position: absolute; visibility: hidden; background:#fff; width:250px;  top:60px; left:-50px; z-index:9999; box-shadow:0 1px 15px rgba(18,21,21,.2);padding:10px 5px;}
+                #jsddm ul li{ float:left; width:105px; padding-left:20px; line-height:40px;}
+            </style>
+            <!-- <li class="nav-news"><a href="#" target="_blank">正能量新闻<span class="nums-prompt nums-prompt-topic"></span></a></li> -->
+            <li class="nav-news"><a href="celebrity.html" target="_blank">爱国人物科普</a></li>
+            <li class="nav-news"><a href="patriotic_knowledge.html" target="_blank">爱国知识科普<span class="nums-prompt"></span></a></li>
+            <!-- <li class="nav-news"><a href="#" target="_blank">疫情快讯<em class="nums-prompt"></em></a></li> -->
+            <li class="nav-news"><a href="protection.html" target="_blank">疫情防护科普</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right transition  xiala main_nav">
+            <!-- <li class="app-guide js-app-guide" >
+              <div class="app-guide-box">
+                     <img src="images/1448211685.png">
+                     <div class="app-guide-title">
+                         <span>微信扫一扫</span><br>
+                         <span>下载虎嗅APP</span>
+                     </div>
+                 </div>
+                 <i class="icon icon-sm-phone"></i>APP下载<em class="guide-prompt"></em>
+             </li> -->
+            <!-- <li class="search-li js-show-search-box"><a><i class="icon icon-search "></i></a><span>搜索</span></li> -->
+            <!--            <li class="login-link-box"><a id="login_visible" class="cd-signin">登录</a></li>-->
+            <!--            <li ><a id="sign_visible" class="cd-signup" >注册</a></li>-->
+            <!--            <li ><a id="login_hidden" class="cd-signup" style="visibility: hidden" href="member.html" target="_blank">关于我</a></li>-->
+            <!--            <li><a class="cd-tougao">投稿</a></li>-->
+        </ul>
+    </div>
+    <div id="user_model" class="cd-user-modal">
+        <div class="cd-user-modal-container">
+            <div id="cd-login"> <!-- 登录表单 -->
+                <div class="modal-alert-title">登录虎嗅</div>
+                <div class="register" >
+                    <div class="register-top" id="reg-top"><i><a id="qrcode" href="#"></a></i></div>
+                    <div class="register-con" id="rc">
+                        <div class="login-form username-box " style="margin-top:52px;">
+                            <a class="js-open-sms-login sms-text">短信快捷登录</a>
+                            <label class="login-label transition" >
+                                <input id="login_username" class="login-input" placeholder="手机号／邮箱／虎嗅账号">
+                            </label>
+                            <label class="login-label">
+                                <input id="login_password" class="login-input password" type="password" placeholder="输入6～24位密码">
+                            </label>
+                            <a class="js-label-select label-select-box hide login-label-select text-center"><span class="js-country-user">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                            <!--						<div class="login-operation">-->
+                            <!--                			<label><input id="autologin" type="checkbox">&nbsp;2周内自动登录</label>-->
+                            <!--               				<a href="/user/reset_password" class="js-forget-passward pull-right">忘记密码</a>-->
+                            <!--            			</div>-->
+                            <button class="js-btn-login btn-login" onclick="login()">登&nbsp;录</button>
+                        </div>
+                        <!--        			<div class="js-open-register register-text">极速注册</div>-->
+                        <!--        			<div class="third-box">-->
+                        <!--            			<div class="title"><span>第三方登录</span></div>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-qq"></i></a>-->
+                        <!--            			<a class="js-login-switch"><i class="icon-modal icon-login-wx"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-wb"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-zfb"></i></a>-->
+                        <!--        			</div>-->
+                    </div>
+                </div>
+                <!--			<div class="saoma" id="sm">-->
+                <!--				<div class="qr-code" style="text-align:center">-->
+                <!--                    <div class="title">微信登录</div>-->
+                <!--					<div class="waiting panelContent">-->
+                <!--						<div class="wrp_code"><img class="qrcode lightBorder" src="images/150943753529.png"></div>-->
+                <!--						<div class="info">-->
+                <!--							<div class="status status_browser js_status" id="wx_default_tip">-->
+                <!--			                	<p>请使用微信扫描二维码登录</p>-->
+                <!--                            	<p>"天大毛概"</p>-->
+                <!--			           		 </div>-->
+                <!--						</div>-->
+                <!--					</div>-->
+                <!--                 </div>-->
+                <!--        		<div class="screen-tu" id="screen"></div>-->
+                <!--			</div>-->
+            </div>
+            <div id="cd_login"> <!-- 注册表单 -->
+                <div class="modal-alert-title">&nbsp;</div>
+                <div class="js-open-register register-text">极速注册</div>
+                <div class="user-register-box">
+                    <div class="login-form sms-box">
+
+                        <div class="geetest_login_sms_box" >
+                            <div id="profie" class="gt_holder gt_float" style="touch-action: none;">
+                            </div>
+                        </div>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_name" class="login-input username" placeholder="手机号"></label>
+                        <a class="js-label-select label-select-box text-center"><span class="js-country-sms">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_pass" class="login-input username" placeholder="设置密码"></label>
+
+
+                        <button class="js-btn-sms-login btn-login" onclick="sign()">注&nbsp;册</button>
+                        <p class="card-text" id="sign_info"></p>
+                    </div>
+                    <!--				<div class="js-user-login register-text">已有账号，立即登录</div></div>-->
+                </div>
+                <!--			<a href="#0" class="cd-close-form ">关闭</a>-->
+            </div>
+        </div>
+    </div>
+
+
+
+</header>
+
+<div class="placeholder-height"></div>
+
+<h1 class="t-h1">活动-天大毛概</h1>
+<div class="container" id="activity">
+
+
+
+    <div class="nav-column">
+        <i class="icon2 icon-calendar"></i>爱国文章专栏
+    </div>
+    <div class="activity-list-warp">
+
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article0.html" target="_blank">这十个爱国常识，很多人不知道</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article0.html" target="_blank"><img src="images/patriotic_knowledge/article0.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article0.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article0.html" target="_blank">这十个爱国常识，很多人不知道</a>
+                </div>
+                <div class="activity-content">
+                    爱国应该在中国法律框架内进行，僭越法律底线的“爱国”行为只能授人以柄，损害国家形象，使亲者痛、仇者快。戾气并非正义，只有理性爱国、奋力强国、精心治国，才能真正捍卫国家和民族的尊严。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/news_political/article0.html" target="_blank">在汾河之滨，读懂习近平生态文明思想的丰富内涵</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/news_political/article0.html" target="_blank"><img src="images/patriotic_knowledge/article00.jpeg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/news_political/article0.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/news_political/article0.html" target="_blank">在汾河之滨，读懂习近平生态文明思想的丰富内涵</a>
+                </div>
+                <div class="activity-content">
+                    “要牢固树立绿水青山就是金山银山的理念，发扬‘右玉精神’，统筹推进山水林田湖草系统治理”，5月12日，习近平总书记在山西考察时特别强调要弘扬“右玉精神”。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article1.html" target="_blank">揭穿美方18个谣言画皮</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article1.html" target="_blank"><img src="https://images.shobserver.com/img/2020/5/15/5075aa91-2d5b-4d6a-b96d-5a51ae11c776.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article1.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article1.html" target="_blank">揭穿美方18个谣言画皮</a>
+                </div>
+                <div class="activity-content">
+                    疫情肆虐，人命关天。病毒是人类的共同敌人，全世界都应该携手共同应对疫情挑战。然而以美国为代表的西方一些政客和媒体不把精力放在抗击疫情上面，却费劲心机“甩锅”中国，编造了各种匪夷所思的谎言。一时间，谎言、谣传和阴谋论甚嚣尘上。来看看新冠肺炎疫情中关于中国的18个最常见谣言和事实真相。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/protection/kangyi.html" target="_blank">中国精神在战“疫”中的生动体现</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/protection/kangyi.html" target="_blank"><img src="images/protection/kangyi.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/protection/kangyi.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/protection/kangyi.html" target="_blank">中国精神在战“疫”中的生动体现</a>
+                </div>
+                <div class="activity-content">
+                    岁末年初，一场突如其来的新冠肺炎疫情仿佛给我们按下暂停键，我们不得不改变工作、学习及生活的轨迹。在以习近平同志为核心的党中央统一领导下，举国上下齐动员，勠力同心抗疫情。今天，我们已经度过了最艰难的时刻，疫情防控形势持续向好。之所以取得这样的成果，是因为有伟大的民族精神的支撑。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article2.html" target="_blank">推进马克思主义本土化大众化</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article2.html" target="_blank"><img src="images/patriotic_knowledge/list_makesi.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article2.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article2.html" target="_blank">推进马克思主义本土化大众化</a>
+                </div>
+                <div class="activity-content">
+                    　习近平总书记在云南考察时强调，我们现在就需要像艾思奇那样能够把马克思主义本土化讲好的人才。我们要传播好马克思主义，不能照本宣科、寻章摘句，要大众化、通俗化。这一重要论述，为传播马克思主义、做好马克思主义理论研究工作指明了方向。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article3.html" target="_blank">中国疫情防控彰显党的体制优势</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article3.html" target="_blank"><img src="images/patriotic_knowledge/article3.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article3.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article3.html" target="_blank">中国疫情防控彰显党的体制优势</a>
+                </div>
+                <div class="activity-content">
+                    面对这次来势凶猛的新冠肺炎疫情，在习近平总书记和党中央的坚强领导下，举国上下同时间赛跑、与病魔较量，从中央到地方、从机关到基层、从城市到乡村、从内陆到边疆等各条战线、各个领域、各个方面，紧急行动、全力奋战、英勇奋战、团结奋战，打响了疫情防控的人民战争。
+                </div>
+            </div>
+        </section>
+
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article4.html" target="_blank">传承红色基因    汇聚复兴伟力</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article4.html" target="_blank"><img src="images/patriotic_knowledge/article44.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article4.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article4.html" target="_blank">传承红色基因    汇聚复兴伟力</a>
+                </div>
+                <div class="activity-content">
+                    习近平总书记反复告诫全党同志，“不能忘记红色政权是怎么来的、新中国是怎么来的、今天的幸福生活是怎么来的”，一再叮嘱“把红色基因传承好，确保红色江山永不变色”，向全党全社会注入铭记历史、缅怀先烈、传承红色基因的不朽信念。新中国成立以来波澜壮阔的实践表明，红色基因永远是激励我们砥砺前行的强大正能量。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article5.html" target="_blank">西迁精神跨越时空</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article5.html" target="_blank"><img src="images/patriotic_knowledge/article5.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article5.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article5.html" target="_blank">西迁精神跨越时空</a>
+                </div>
+                <div class="activity-content">
+                    　习近平总书记在西安交通大学考察时，亲切会见14位西迁老教授，重提轰轰烈烈的“西迁”壮举，勉励广大师生大力弘扬“西迁精神”，抓住新时代新机遇，到祖国最需要的地方建功立业，在新征程上创造属于我们这代人的历史功绩。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article6.html" target="_blank">我国基本经济制度具有显著优势的原理</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article6.html" target="_blank"><img src="images/patriotic_knowledge/article6.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article6.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article6.html" target="_blank">我国基本经济制度具有显著优势的原理</a>
+                </div>
+                <div class="activity-content">
+                    　公有制为主体、多种所有制经济共同发展，按劳分配为主体、多种分配方式并存，社会主义市场经济体制等社会主义基本经济制度，不仅同我国社会主义初级阶段社会生产力发展水平相适应，具有不断解放和发展社会生产力的显著优势；而且深刻体现社会主义本质要求。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article7.html" target="_blank">五四运动在中共党史研究中的地位</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article7.html" target="_blank"><img src="images/patriotic_knowledge/article7.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article7.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article7.html" target="_blank">五四运动在中共党史研究中的地位</a>
+                </div>
+                <div class="activity-content">
+                    　1942年3月，毛泽东在中央学习组指导学习研究中共党史时明确指出，我们研究党史，只从1921年起还不能完全说明问题，恐怕要有前面这部分的材料说明共产党的前身。这前面的部分扯远了嫌太长，从辛亥革命说起差不多，从五四运动说起可能更好。中国共产党成立的思想、干部、阶级条件都是在五四运动期间奠定的。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article8.html" target="_blank">“中国之治”的显著优势</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article8.html" target="_blank"><img src="images/patriotic_knowledge/list_zhongguozhizhi.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article8.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article8.html" target="_blank">“中国之治”的显著优势</a>
+                </div>
+                <div class="activity-content">
+                    　党的十九届四中全会《决定》将中国特色社会主义制度和国家治理体系的显著优势概括为13个方面。这一重要论断和科学概括，体现了以习近平同志为核心的党中央对中国特色社会主义建设规律认识的深化，体现了中国特色社会主义制度和国家治理体系建立、完善、发展的历史逻辑、理论逻辑、实践逻辑。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article9.html" target="_blank">进一步发挥人民代表大会制度优势</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article9.html" target="_blank"><img src="images/patriotic_knowledge/article9.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article9.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article9.html" target="_blank">进一步发挥人民代表大会制度优势</a>
+                </div>
+                <div class="activity-content">
+                    党的十九大指出，人民代表大会制度是坚持党的领导、人民当家作主、依法治国有机统一的根本政治制度安排，是支撑中国国家治理体系和治理能力的根本政治制度。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/patriotic_knowledge/article10.html" target="_blank">“一国两制”具有深远历史意义</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/patriotic_knowledge/article10.html" target="_blank"><img src="images/patriotic_knowledge/article10.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/patriotic_knowledge/article10.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/patriotic_knowledge/article10.html" target="_blank">“一国两制”具有深远历史意义</a>
+                </div>
+                <div class="activity-content">
+                    　中国特色社会主义的一个重要“特色”就是“一国两制”。邓小平明确指出，“一国两制”这个构想是在中国的实际情况下提出来的。正因为如此，“这就叫中国特色”。他还明确将“一国两制”与中国特色社会主义制度联系起来。
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+    <div class="modal-backdrop fade in js-modal-backdrop"></div>
+    <div class="container copy-right" >
+        <span >本站由  <a href="#">毛泽东思想和中国特色社会主义理论体系概论 小组</a> 负责维护 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维护意见邮箱 ： 3017218091@tju.edu.cn
+            <!--            &nbsp;<a href="#" target="_blank"><i class="i-wj"></i>京公网安备 11010102001402号</a>&nbsp;&nbsp;&nbsp;<em class="bull-right">本站由</em><i class="icon-aliyun" style="width: 70px;background-size: 100%;left: 7px;"></i><em class="bull-em">提供计算与安全服务</em>-->
+        </span>
+        <div class="footer-icon-list pull-right">
+            <ul class="Qr-codee">
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/weixin_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-wx"></i>
+                </li>
+                </a>
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/app_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-rss"></i></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+<script type="text/javascript" src="js/mouse.js"></script>
+</body>
+</html>

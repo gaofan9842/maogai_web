@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>首页</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="renderer" content="webkit">
+    <meta name="baidu-site-verification" content="R9XA5lWxu2" />
+   <!--   <link rel="shortcut icon" href="../../../../images/logo/logo.png" /> -->
+   <link rel="shortcut icon" href="images/logo/logo.png" />
+    <meta name="keywords" content="天大毛概">
+    <meta name="description" content="天大毛概">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/build.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/dlzc.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <script language="javascript" type="text/javascript" src="js/popwin2.js"></script>
+    <script src="js/d-login.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/nanoscroller.css">
+    
+    
+</head>
+
+<body>
+
+<header id="top" role="banner" class="transition">
+
+    <div class="container">
+        <div class="navbar-header transition">
+            <a href="#" title="首页"><img src="images/logo/logo2.png" alt="天大毛概" title="首页" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-left" id="jsddm">
+            <li class="nav-news js-show-menu">
+               <a href="#">资讯 <span class="caret"></span></a>
+				<ul>
+					<li><a href="news_political.html" target="_blank">热点社评</a></li>
+<!--                    <li><a href="#" target="_blank">疫情快讯</a></li>-->
+                    <li><a href="news_campus.html" target="_blank">校内快讯</a></li>
+				</ul>
+            </li>
+            <style>
+#jsddm ul{position: absolute; visibility: hidden; background:#fff; width:250px;  top:60px; left:-50px; z-index:9999; box-shadow:0 1px 15px rgba(18,21,21,.2);padding:10px 5px;}
+#jsddm ul li{ float:left; width:105px; padding-left:20px; line-height:40px;}
+</style>
+           <!-- <li class="nav-news"><a href="#" target="_blank">正能量新闻<span class="nums-prompt nums-prompt-topic"></span></a></li> -->
+            <li class="nav-news"><a href="celebrity.html" target="_blank">爱国人物科普</a></li>
+            <li class="nav-news"><a href="patriotic_knowledge.html" target="_blank">爱国知识科普<span class="nums-prompt"></span></a></li>
+           <!-- <li class="nav-news"><a href="#" target="_blank">疫情快讯<em class="nums-prompt"></em></a></li> -->
+            <li class="nav-news"><a href="protection.html" target="_blank">疫情防护科普</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right transition  xiala main_nav">
+           <!-- <li class="app-guide js-app-guide" >
+             <div class="app-guide-box">
+                    <img src="images/1448211685.png">
+                    <div class="app-guide-title">
+                        <span>微信扫一扫</span><br>
+                        <span>下载虎嗅APP</span>
+                    </div>
+                </div>
+                <i class="icon icon-sm-phone"></i>APP下载<em class="guide-prompt"></em>
+            </li> -->
+            <!-- <li class="search-li js-show-search-box"><a><i class="icon icon-search "></i></a><span>搜索</span></li> -->
+<!--            <li class="login-link-box"><a id="login_visible" class="cd-signin">登录</a></li>-->
+<!--            <li ><a id="sign_visible" class="cd-signup" >注册</a></li>-->
+<!--            <li ><a id="login_hidden" class="cd-signup" style="visibility: hidden" href="member.html" target="_blank">关于我</a></li>-->
+<!--            <li><a class="cd-tougao">投稿</a></li>-->
+        </ul>
+    </div>
+<div id="user_model" class="cd-user-modal">
+	<div class="cd-user-modal-container">
+		<div id="cd-login"> <!-- 登录表单 -->
+			<div class="modal-alert-title">登录虎嗅</div>
+            <div class="register" >
+				<div class="register-top" id="reg-top"><i><a id="qrcode" href="#"></a></i></div>
+				<div class="register-con" id="rc">
+                	<div class="login-form username-box " style="margin-top:52px;">
+           				<a class="js-open-sms-login sms-text">短信快捷登录</a>
+            			<label class="login-label transition" >
+                			<input id="login_username" class="login-input" placeholder="手机号／邮箱／虎嗅账号">
+            			</label>
+            			<label class="login-label">
+                			<input id="login_password" class="login-input password" type="password" placeholder="输入6～24位密码">
+            			</label>
+            			<a class="js-label-select label-select-box hide login-label-select text-center"><span class="js-country-user">+86</span><i class="icon-modal icon-l-caret"></i></a>
+<!--						<div class="login-operation">-->
+<!--                			<label><input id="autologin" type="checkbox">&nbsp;2周内自动登录</label>-->
+<!--               				<a href="/user/reset_password" class="js-forget-passward pull-right">忘记密码</a>-->
+<!--            			</div>-->
+            			<button class="js-btn-login btn-login" onclick="login()">登&nbsp;录</button>
+        			</div>
+<!--        			<div class="js-open-register register-text">极速注册</div>-->
+<!--        			<div class="third-box">-->
+<!--            			<div class="title"><span>第三方登录</span></div>-->
+<!--            			<a href="#"><i class="icon-modal icon-login-qq"></i></a>-->
+<!--            			<a class="js-login-switch"><i class="icon-modal icon-login-wx"></i></a>-->
+<!--            			<a href="#"><i class="icon-modal icon-login-wb"></i></a>-->
+<!--            			<a href="#"><i class="icon-modal icon-login-zfb"></i></a>-->
+<!--        			</div>-->
+    			</div>
+            </div>
+<!--			<div class="saoma" id="sm">-->
+<!--				<div class="qr-code" style="text-align:center">-->
+<!--                    <div class="title">微信登录</div>-->
+<!--					<div class="waiting panelContent">-->
+<!--						<div class="wrp_code"><img class="qrcode lightBorder" src="images/150943753529.png"></div>-->
+<!--						<div class="info">-->
+<!--							<div class="status status_browser js_status" id="wx_default_tip">-->
+<!--			                	<p>请使用微信扫描二维码登录</p>-->
+<!--                            	<p>"天大毛概"</p>-->
+<!--			           		 </div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--                 </div>-->
+<!--        		<div class="screen-tu" id="screen"></div>-->
+<!--			</div>-->
+		</div>
+    	<div id="cd_login"> <!-- 注册表单 -->
+			<div class="modal-alert-title">&nbsp;</div>
+            <div class="js-open-register register-text">极速注册</div>
+       	    <div class="user-register-box">
+				<div class="login-form sms-box">
+
+					<div class="geetest_login_sms_box" >
+						<div id="profie" class="gt_holder gt_float" style="touch-action: none;">
+						</div>
+					</div>
+                    <label class="login-label col-xs-label transition"><input id="sms_username_name" class="login-input username" placeholder="手机号"></label>
+					<a class="js-label-select label-select-box text-center"><span class="js-country-sms">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                    <label class="login-label col-xs-label transition"><input id="sms_username_pass" class="login-input username" placeholder="设置密码"></label>
+
+
+					<button class="js-btn-sms-login btn-login" onclick="sign()">注&nbsp;册</button>
+                    <p class="card-text" id="sign_info"></p>
+				</div>
+<!--				<div class="js-user-login register-text">已有账号，立即登录</div></div>-->
+    		</div>
+<!--			<a href="#0" class="cd-close-form ">关闭</a>-->
+	</div>
+</div>
+</div>
+
+
+
+</header>
+
+
+<div class="placeholder-height"></div>
+<div class="container" id="index">
+	<div class="wrap-left pull-left">
+        <div class="big-pic-box">
+             <div class="big-pic">
+                  <a href="layout/celebrity/zhangtailei.html" target="_blank" class="transition" title="张太雷革命精神初探 ——兼论“常州三杰”的人生观">
+                     <div class="back-img"><img src="images/celebrity/zhangtailei.jpg"  alt=""></div>
+                     <div class="big-pic-content">
+                          <h1 class="t-h1">张太雷革命精神初探 ——兼论“常州三杰”的人生观</h1>
+                      </div>
+                  </a>
+
+
+             </div>
+             <div class="big2-pic big2-pic-index big2-pic-index-top">
+                  <a href="" class="back-img transition" target="_blank" title="”七步洗手法“，你学会了吗？">
+                     <img class="lazy" src="images/protection/xishou.png" alt="”七步洗手法“，你学会了吗？">
+                  </a>
+                  <a href="layout/protection/xishou.html" target="_blank" title="”七步洗手法“，你学会了吗？">
+                     <div class="big2-pic-content">
+                          <h2 class="t-h1" style="color : black ; font-weight: bold">”七步洗手法“，你学会了吗？</h2>
+                     </div>
+                  </a>
+             </div>
+             <div class="big2-pic big2-pic-index big2-pic-index-bottom">
+                  <a href="#" class="back-img transition" target="_blank" title="这十个爱国常识，很多人不知道">
+                     <img class="lazy" src="images/patriotic_knowledge/article0.jpg" alt="这十个爱国常识，很多人不知道">
+                  </a>
+                  <a href="layout/patriotic_knowledge/article0.html" target="_blank" 这十个爱国常识，很多人不知道>
+                     <div class="big2-pic-content">
+                          <h2 class="t-h1 " style="color : black ; font-weight: bold">这十个爱国常识，很多人不知道</h2>
+                     </div>
+                  </a>
+             </div>
+       </div>
+       <div class="mod-info-flow">
+            <div class="mod-b mod-art" data-aid="213665">
+            	 <div class="mod-angle">热</div>
+                 <div class="mod-thumb ">
+                       <a class="transition" title="在汾河之滨，读懂习近平生态文明思想的丰富内涵" href="layout/news_political/article0.html" target="_blank">
+						  <img class="lazy" src="images/patriotic_knowledge/article00.jpeg" alt="在汾河之滨，读懂习近平生态文明思想的丰富内涵">
+                       </a>
+                 </div>
+                 <div class="column-link-box">
+                 	<a href="layout/news_political/article0.html" class="column-link" target="_blank">查看全文></a>
+                 </div>
+                 <div class="mob-ctt">
+                    <h2><a href="layout/news_political/article0.html" class="transition msubstr-row2" target="_blank">在汾河之滨，读懂习近平生态文明思想的丰富内涵</a></h2>
+					<div class="mob-author">
+                         <div class="author-face">
+                              <a href="http://news.cctv.com/" target="_blank"><img src="http://p1.img.cctvpic.com/photoAlbum/templet/common/DEPA1502157896010276/newslog200.jpg"></a>
+                         </div>
+                         <a href="http://news.cctv.com/" target="_blank">
+                            <span class="author-name ">央视网</span>
+                         </a>
+                         <a href="#" target="_blank" title="购买VIP会员"></a>
+                         <span class="time">2020-05-15 11:47</span>
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                    </div>
+                     <div class="mob-sub"><a href="layout/news_political/article0.html" target="_blank">“要牢固树立绿水青山就是金山银山的理念，发扬‘右玉精神’，统筹推进山水林田湖草系统治理”，5月12日，习近平总书记在山西考察时特别强调要弘扬“右玉精神”。</a></div>
+                 </div>
+            </div>
+
+
+           <div class="mod-b mod-art" data-aid="213665">
+<!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="戴口罩能不能进行剧烈运动？" href="layout/protection/kouzhao.html" target="_blank">
+                       <img class="lazy" src="images/protection/kouzhao.jpg" alt="戴口罩能不能进行剧烈运动？">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/protection/kouzhao.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/protection/kouzhao.html" class="transition msubstr-row2" target="_blank">戴口罩能不能进行剧烈运动？</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+                           <a href="http://bjrb.bjd.com.cn/html/2020-05/15/node_1.htm" target="_blank"><img src="images/logo/beijing_daily.png"></a>
+                       </div>
+                       <a href="http://bjrb.bjd.com.cn/html/2020-05/15/node_1.htm" target="_blank">
+                           <span class="author-name ">北京日报</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020年05月13日 10:40:32 </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/protection/kouzhao.html" target="_blank">　随着天气转暖和疫情的缓解，越来越多的人选择到户外舒活筋骨，佩戴口罩仍然是疫情防控的重要措施之一。但不幸的是，部分地区出现了佩戴口罩跑步意外猝死事件，有人怀疑这是戴着口罩进行剧烈运动时缺氧所致。那么，戴口罩到底能不能进行剧烈运动？戴口罩做运动又应该注意什么呢？</a></div>
+               </div>
+           </div>
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="揭穿美方18个谣言画皮" href="layout/patriotic_knowledge/article1.html" target="_blank">
+                       <img class="lazy" src="https://images.shobserver.com/img/2020/5/15/5075aa91-2d5b-4d6a-b96d-5a51ae11c776.jpg" alt="揭穿美方18个谣言画皮">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article1.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article1.html" class="transition msubstr-row2" target="_blank">揭穿美方18个谣言画皮</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="https://www.jfdaily.com/home" target="_blank"><img src="https://www.jfdaily.com/images/logoblack2.png"></a>
+                       </div>
+                       <a href="https://www.jfdaily.com/home" target="_blank">
+                           <span class="author-name ">上观新闻</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time"> 2020-05-15 14:41 </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article1.html" target="_blank">　疫情肆虐，人命关天。病毒是人类的共同敌人，全世界都应该携手共同应对疫情挑战。然而以美国为代表的西方一些政客和媒体不把精力放在抗击疫情上面，却费劲心机“甩锅”中国，编造了各种匪夷所思的谎言。一时间，谎言、谣传和阴谋论甚嚣尘上。来看看新冠肺炎疫情中关于中国的18个最常见谣言和事实真相。</a></div>
+               </div>
+           </div>
+
+            <div class="mod-b mod-art mod-b-push ">
+                 <a class="transition" href="layout/celebrity/zhouenlai.html" target="_blank" title="弘扬周恩来精神 践行初心使命">
+                    <div class="mod-thumb ">
+                         <img class="lazy" src="images/celebrity/zhouenlai.jpg" alt="弘扬周恩来精神 践行初心使命">
+                    </div>
+                 </a>
+                 <div class="column-link-box column-link-big-box">
+                    <a href="layout/celebrity/zhouenlai.html" class="column-link" target="_blank">查看全文></a>
+                 </div>
+                 <div class="mob-ctt">
+                    <h2><a href="layout/celebrity/zhouenlai.html" class="transition msubstr-row5" target="_blank">弘扬周恩来精神 践行初心使命</a></h2>
+                    <div class="mob-author">
+                         <div class="author-face">
+                              <a href="http://xh.xhby.net/mp3/pclayout/index.html" target="_blank"><img class="lazy" src="http://xh.xhby.net/mp3/js/images/04.png"></a>
+                         </div>
+                         <a href="http://xh.xhby.net/mp3/pclayout/index.html" target="_blank">
+                              <span class="author-name">新华日报</span>
+                         </a>
+                         <a href="#"></a>
+                         <span class="time">2019-06-18 10:54</span>
+                    </div>
+					<div class="mob-sub">
+                        <a href="layout/celebrity/zhouenlai.html" target="_blank">　
+                            &nbsp;&nbsp;&nbsp;&nbsp;周恩来同志是中国共产党人的杰出代表、党政干部学习的崇高榜样。在半个多世纪的革命生涯中，周恩来同志始终坚定理想信念，对党绝对忠诚，牢记为民宗旨，为党和人民的事业鞠躬尽瘁，体现了中国共产党人的高风亮节和崇高境界，他奋斗的一生是我们党不忘初心、牢记使命的生动缩影。</a></div>
+                 </div>
+                 </div>
+
+
+            <div class="mod-b mod-art promote">
+                 <a href="layout/protection/kangyi.html" target="_blank" title="">
+                    <div class="mod-thumb">
+                         <img class="lazy" src="images/protection/kangyi.jpg">
+                    </div>
+                 </a>
+                 <div class="mob-ctt">
+                      <a href="layout/protection/kangyi.html" target="_blank">【战“疫”说理】</a>
+                      <span class="point">&bull;</span>
+                      <a href="layout/protection/kangyi.html" target="_blank">中国精神在战“疫”中的生动体现</a>
+                     <a href="layout/protection/kangyi.html" target="_blank"> <span class="span-mark-pro">详情</span></a>
+                 </div>
+            </div>
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="推进马克思主义本土化大众化" href="layout/patriotic_knowledge/article2.html" target="_blank">
+                       <img class="lazy" src="images/patriotic_knowledge/article2.jpg" alt="推进马克思主义本土化大众化">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article2.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article2.html" class="transition msubstr-row2" target="_blank">推进马克思主义本土化大众化</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://www.people.com.cn/" target="_blank"><img src="http://www.people.com.cn/img/2016people/images/rmw_logo.png"></a>
+                       </div>
+                       <a href="http://www.people.com.cn/" target="_blank">
+                           <span class="author-name ">人民日报</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time"> 2020-04-29 10:27:56 </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article2.html" target="_blank">　　习近平总书记在云南考察时强调，我们现在就需要像艾思奇那样能够把马克思主义本土化讲好的人才。我们要传播好马克思主义，不能照本宣科、寻章摘句，要大众化、通俗化。这一重要论述，为传播马克思主义、做好马克思主义理论研究工作指明了方向。</a></div>
+               </div>
+           </div>
+
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="中国疫情防控彰显党的体制优势" href="layout/patriotic_knowledge/article3.html" target="_blank">
+                       <img class="lazy" src="images/patriotic_knowledge/article3.jpg" alt="中国疫情防控彰显党的体制优势">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article3.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article3.html" class="transition msubstr-row2" target="_blank">中国疫情防控彰显党的体制优势</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://cpc.people.com.cn/" target="_blank"><img src="/images/logo/cpcnews.png"></a>
+                       </div>
+                       <a href="http://cpc.people.com.cn/" target="_blank">
+                           <span class="author-name ">中国共产党新闻网</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020年04月10日08:19 </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article3.html" target="_blank">面对这次来势凶猛的新冠肺炎疫情，在习近平总书记和党中央的坚强领导下，举国上下同时间赛跑、与病魔较量，从中央到地方、从机关到基层、从城市到乡村、从内陆到边疆等各条战线、各个领域、各个方面，紧急行动、全力奋战、英勇奋战、团结奋战，打响了疫情防控的人民战争、总体战、阻击战。</a></div>
+               </div>
+           </div>
+
+
+            <div class="mod-b mod-art mod-b-push ">
+                 <a class="transition" href="layout/celebrity/maozedong.html" target="_blank" title="习近平谈怎样学习毛泽东">
+                    <div class="mod-thumb ">
+                         <img class="lazy" src="images/celebrity/maozedong.jpg" alt="习近平谈怎样学习毛泽东">
+                    </div>
+                 </a>
+                 <div class="column-link-box column-link-big-box">
+                    <a href="layout/celebrity/maozedong.html" class="column-link" target="_blank">查看全文></a>
+                 </div>
+                 <div class="mob-ctt">
+                    <h2><a href="layout/celebrity/maozedong.html" class="transition msubstr-row5" target="_blank">习近平谈怎样学习毛泽东</a></h2>
+                    <div class="mob-author">
+                         <div class="author-face">
+                              <a href="http://www.dangjian.cn/" target="_blank"><img class="lazy" src="http://images.wenming.cn/web_djw/images/dangjian-20161121-01.png"></a>
+                         </div>
+                         <a href="http://www.dangjian.cn/" target="_blank">
+                              <span class="author-name">党建网</span>
+                         </a>
+                         <a href="#" ></a>
+                         <span class="time">2019-12-26 </span>
+                    </div>
+                     <div class="mob-sub"><a href="layout/celebrity/maozedong.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;毛泽东是中国共产党、中国人民解放军、中华人民共和国的主要缔造者，中国各族人民的伟大领袖。他是党的第一代中央领导集体的核心，是领导中国人民彻底改变自己命运和国家面貌的一代伟人。习近平同志担任总书记以来，在各种场合多次要求我们学习毛泽东等老一辈革命家的高尚品格。</a></div>
+                </div>
+            </div>
+
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="传承红色基因 &nbsp;&nbsp; 汇聚复兴伟力" href="layout/patriotic_knowledge/article4.html" target="_blank">
+                       <img class="lazy" src="images/patriotic_knowledge/article4.jpg" alt="传承红色基因 &nbsp;&nbsp; 汇聚复兴伟力">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article4.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article4.html" class="transition msubstr-row2" target="_blank">传承红色基因 &nbsp;&nbsp; 汇聚复兴伟力</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://www.cntheory.com/" target="_blank"><img src="http://www.cntheory.com/Templets/images/logo.png"></a>
+                       </div>
+                       <a href="http://www.cntheory.com/" target="_blank">
+                           <span class="author-name ">理论网</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020-03-23 09:02:20  </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article4.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;党的十八大以来，习近平总书记多次瞻仰革命历史纪念场所，在新中国成立70周年前的短短几个月，先后到江西于都、甘肃高台、北京香山、河南新县实地缅怀革命先烈。习近平总书记反复告诫全党同志，“不能忘记红色政权是怎么来的、新中国是怎么来的、今天的幸福生活是怎么来的”</a></div>
+               </div>
+           </div>
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="像雷锋那样践行初心使命" href="layout/celebrity/leifeng.html" target="_blank">
+                       <img class="lazy" src="images/celebrity/leifeng.jpg" alt="像雷锋那样践行初心使命">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/celebrity/leifeng.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/celebrity/leifeng.html" class="transition msubstr-row2" target="_blank">像雷锋那样践行初心使命</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://xh.xhby.net/mp3/pclayout/202005/16/l1.html" target="_blank"><img src="http://member.jschina.com.cn/xhdaily.png"></a>
+                       </div>
+                       <a href="http://xh.xhby.net/mp3/pclayout/202005/16/l1.html" target="_blank">
+                           <span class="author-name ">新华日报</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020-03-05  </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/celebrity/leifeng.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;在“不忘初心、牢记使命”主题教育总结大会上，习近平总书记强调：“不忘初心、牢记使命，必须作为加强党的建设的永恒课题和全体党员、干部的终身课题常抓不懈。</a></div>
+               </div>
+           </div>
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="西迁精神跨越时空" href="layout/patriotic_knowledge/article5.html" target="_blank">
+                       <img class="lazy" src="images/patriotic_knowledge/article5.jpg" alt="西迁精神跨越时空">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article5.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article5.html" class="transition msubstr-row2" target="_blank">西迁精神跨越时空</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://www.jjjcb.cn/content/2020-05/16/node_2.htm" target="_blank"><img src="images/logo/jijian.png"></a>
+                       </div>
+                       <a href="http://www.jjjcb.cn/content/2020-05/16/node_2.htm" target="_blank">
+                           <span class="author-name ">中国纪检监察报</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020年04月30日 12:45:41  </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article5.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;习近平总书记在西安交通大学考察时，亲切会见14位西迁老教授，重提轰轰烈烈的“西迁”壮举，勉励广大师生大力弘扬“西迁精神”，抓住新时代新机遇，到祖国最需要的地方建功立业，在新征程上创造属于我们这代人的历史功绩。</a></div>
+               </div>
+           </div>
+
+           <div class="mod-b mod-art mod-b-push ">
+               <a class="transition" href="layout/celebrity/dengxiaoping.html" target="_blank" title="邓小平论弘扬斗争精神">
+                   <div class="mod-thumb ">
+                       <img class="lazy" src="images/celebrity/dengxiaoping.jpg" alt="邓小平论弘扬斗争精神">
+                   </div>
+               </a>
+               <div class="column-link-box column-link-big-box">
+                   <a href="layout/celebrity/dengxiaoping.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/celebrity/dengxiaoping.html" class="transition msubstr-row5" target="_blank">邓小平论弘扬斗争精神</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+                           <a href="http://www.cntheory.com/" target="_blank"><img class="lazy" src="http://www.cntheory.com/Templets/images/logo.png"></a>
+                       </div>
+                       <a href="http://www.cntheory.com/" target="_blank">
+                           <span class="author-name">理论网</span>
+                       </a>
+                       <a href="#" ></a>
+                       <span class="time"> 2019-09-30 09:07:30  </span>
+                   </div>
+                   <div class="mob-sub"><a href="layout/celebrity/dengxiaoping.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;作为中国共产党第二代中央领导集体的核心，邓小平在领导开创中国特色社会主义的伟大斗争中，紧密结合时代特点和中国实际，从坚定不移走中国特色社会主义道路、发扬敢闯敢冒精神推进改革开放、坚持党的基本路线不动摇、反对官僚主义和特权现象、坚持“一国两制”维护祖国统一、维护世界和平反对霸权主义等国内国际两个大局的多个维度，深刻指明了弘扬斗争精神的重大现实意义和深远时代价值。</a></div>
+               </div>
+           </div>
+
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="我国基本经济制度具有显著优势的原理" href="layout/patriotic_knowledge/article6.html" target="_blank">
+                       <img class="lazy" src="images/patriotic_knowledge/article66.jpg" alt="我国基本经济制度具有显著优势的原理">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/patriotic_knowledge/article6.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/patriotic_knowledge/article6.html" class="transition msubstr-row2" target="_blank">我国基本经济制度具有显著优势的原理</a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="http://www.people.com.cn/" target="_blank"><img src="http://www.people.com.cn/img/2016people/images/rmw_logo.png"></a>
+                       </div>
+                       <a href="http://www.people.com.cn/" target="_blank">
+                           <span class="author-name ">人民日报</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020年04月17日08:03  </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/patriotic_knowledge/article6.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;弄清楚我国基本经济制度具有显著优势的原理，有利于更好坚持和完善社会主义基本经济制度，把制度优势更好转化为治理效能。</a></div>
+               </div>
+           </div>
+
+           <div class="mod-b mod-art" data-aid="213665">
+               <!--               <div class="mod-angle">热</div>-->
+               <div class="mod-thumb ">
+                   <a class="transition" title="疫情防控之口罩篇 " href="layout/protection/daikouzhao.html" target="_blank">
+                       <img class="lazy" src="images/protection/daikouzhao.jpg" alt="疫情防控之口罩篇 ">
+                   </a>
+               </div>
+               <div class="column-link-box">
+                   <a href="layout/protection/daikouzhao.html" class="column-link" target="_blank">查看全文></a>
+               </div>
+               <div class="mob-ctt">
+                   <h2><a href="layout/protection/daikouzhao.html" class="transition msubstr-row2" target="_blank">疫情防控之口罩篇 </a></h2>
+                   <div class="mob-author">
+                       <div class="author-face">
+
+                           <a href="https://www.sohu.com/?spm=smpc.home.top-logo.1.1589652702745EWk3oAE" target="_blank"><img src="https://statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico"></a>
+                       </div>
+                       <a href="https://www.sohu.com/?spm=smpc.home.top-logo.1.1589652702745EWk3oAE" target="_blank">
+                           <span class="author-name ">搜狐新闻</span>
+                       </a>
+                       <a href="#" target="_blank" title="购买VIP会员"></a>
+                       <span class="time">2020-02-02 20:19  </span>
+                       <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                       <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                   </div>
+                   <div class="mob-sub"><a href="layout/protection/daikouzhao.html" target="_blank">&nbsp;&nbsp;&nbsp;&nbsp;过去，流感再怎么流行，都鲜少看到民众戴上口罩，如今，新型冠状病毒肺炎让大家警惕了。这一次，大家对于口罩有更深入的认识。然而最重要的是，当大家努力取得口罩后，正确的戴法才是正道。</a></div>
+               </div>
+           </div>
+
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--            	 <div class="mod-angle">热</div>-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--            	 <div class="mod-angle">热</div>-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+<!--            <div class="mod-b mod-art" data-aid="213665">-->
+<!--                 <div class="mod-thumb ">-->
+<!--                       <a class="transition" title="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低" href="#" target="_blank">-->
+<!--						  <img class="lazy" src="sy-img/111527830443.jpg" alt="你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低">-->
+<!--                       </a>-->
+<!--                 </div>-->
+<!--                 <div class="column-link-box">-->
+<!--                 	<a href="#" class="column-link" target="_blank">娱乐淘金</a>-->
+<!--                 </div>-->
+<!--                 <div class="mob-ctt">-->
+<!--                    <h2><a href="#" class="transition msubstr-row2" target="_blank">你的公司够前沿吗？至少在AI这件事上，多数企业都眼高手低</a></h2>-->
+<!--					<div class="mob-author">-->
+<!--                         <div class="author-face">-->
+<!--                              <a href="#" target="_blank"><img src="sy-img/59_1502432173.jpg"></a>-->
+<!--                         </div>-->
+<!--                         <a href="#" target="_blank">-->
+<!--                            <span class="author-name ">量子位</span>-->
+<!--                         </a>-->
+<!--                         <a href="#" target="_blank" title="购买VIP会员"></a>-->
+<!--                         <span class="time">1小时前</span>-->
+<!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+<!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+<!--                    </div>-->
+<!--                    <div class="mob-sub">公司纷纷看好人工智能技术潜力的同时，真正应用在自己业务中的并不算多</div>-->
+<!--                 </div>-->
+<!--            </div>-->
+
+            <div id="loadmore1" style="display: none" class="mod-b mod-art" data-aid="213665">
+                <div class="mod-thumb ">
+                    <a class="transition" title="钟南山:最在乎的永远是病人 " href="layout/celebrity/zhongnanshan.html" target="_blank">
+                        <img class="lazy" src="images/celebrity/zhongnanshan.jpg" alt="钟南山:最在乎的永远是病人 ">
+                    </a>
+                </div>
+                <div class="column-link-box">
+                    <a href="layout/celebrity/zhongnanshan.html" class="column-link" target="_blank">查看全文></a>
+                </div>
+                <div class="mob-ctt">
+                    <h2><a href="layout/celebrity/zhongnanshan.html" class="transition msubstr-row2" target="_blank">钟南山:最在乎的永远是病人 </a></h2>
+                    <div class="mob-author">
+                        <div class="author-face">
+
+                            <a href="https://www.sohu.com/?spm=smpc.home.top-logo.1.1589652702745EWk3oAE" target="_blank"><img src="https://statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico"></a>
+                        </div>
+                        <a href="https://www.sohu.com/?spm=smpc.home.top-logo.1.1589652702745EWk3oAE" target="_blank">
+                            <span class="author-name ">搜狐新闻</span>
+                        </a>
+                        <a href="#" target="_blank" title="购买VIP会员"></a>
+                        <span class="time"> 2020-02-01    </span>
+                        <!--                         <i class="icon icon-cmt"></i><em>0</em>-->
+                        <!--                         <i class="icon icon-fvr"></i><em>0</em>-->
+                    </div>
+                    <div class="mob-sub"><a href="layout/celebrity/zhongnanshan.html" target="_blank">2003年,非典肆虐,67岁的他说:“把病情最重的病人送到我们这里来!”
+
+                      <br>2020年,新型冠状病毒感染的肺炎爆发,84岁的他一边告诉公众“尽量不要去武汉”,一边自己登上去武汉的高铁,挂帅出征。</a></div>
+                </div>
+            </div>
+		</div>
+
+        <div id="havemore"  class="get-mod-more js-get-mod-more-list transition" data-cur_page="1" data-last_dateline="1504655833" onclick="loadmore()">
+         点击加载更多
+        </div>
+
+        <div id="nomore"   style="display: none" class="get-mod-more js-get-mod-more-list transition" data-cur_page="1" data-last_dateline="1504655833">
+            已经到底咯，下面没有更多啦！！！！！
+        </div>
+
+
+
+	</div>
+    <div class="wrap-right pull-right">
+        <div class="right-ad-box"></div>
+
+<link rel="stylesheet" type="text/css" href="https://static.huxiucdn.com/www/css/moment.css">
+		<div id="moment"></div>
+		<div class="box-moder moder-story-list">
+    		<h3>战役小常识</h3>
+<!--    		<span class="pull-right project-more story-more"><a href="#" class="transition index-24-right js-index-24-right" target="_blank">查看全部</a></span>-->
+    		<span class="span-mark"></span>
+    		<div class="story-box-warp hour-box-warp">
+        		<div class="nano">
+            	<div class="overthrow nano-content description" tabindex="0">
+                	<ul class="box-list mt-box-list">
+                    <!--公共24小时列表部分-->
+                    	<li>
+            				<div class="story-content">
+                				<div class="mt-story-title js-story-title" story-data-show="true">
+                    				<p class="transition hour-arrow">
+                        				<span class="icon icon-caret js-mt-index-icon"></span>
+                   					</p>
+                    				<ul class="hour-head">
+                                        <li><a href="http://sh.people.com.cn/n2/2020/0208/c134768-33777130.html" target="_blank"><img class="hour-tx" src="http://www.people.com.cn/img/2016wb/images/logo01.png" alt="头像"></a></li>
+                        				<li>
+                            				<a href="http://sh.people.com.cn/n2/2020/0208/c134768-33777130.html" target="_blank"><p>人民网</p></a>
+                            				<p>2020年02月08日16:56</p>
+                        				</li>
+                    				</ul>
+                				</div>
+                				<div class="mt-index-info-parent">
+                    				<div class="story-info mt-story-info">
+                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">目前可以确定的新型冠状病毒感染的肺炎传播途径主要为直接传播、气溶胶传播和接触传播。<br>直接传播是指患者喷嚏、咳嗽、说话的飞沫，呼出的气体近距离直接吸入导致的感染；
+
+                                            <br> 溶胶传播是指飞沫混合在空气中，形成气溶胶，吸入后导致感染；
+
+                                            <br>接触传播是指飞沫沉积在物品表面，接触污染手后，再接触口腔、鼻腔、眼睛等粘膜，导致感染。
+                                         </p>
+                    				</div>
+                				</div>
+            				</div>
+        				</li>
+                        <li>
+                            <div class="story-content">
+                                <div class="mt-story-title js-story-title" story-data-show="true">
+                                    <p class="transition hour-arrow">
+                                        <span class="icon icon-caret js-mt-index-icon"></span>
+                                    </p>
+                                    <ul class="hour-head">
+                                        <li><a href="https://www.sohu.com/a/371466850_648534" target="_blank"><img class="hour-tx" src="https://statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" alt="头像"></a></li>
+                                        <li>
+                                            <a href="https://www.sohu.com/a/371466850_648534" target="_blank"><p>搜狐新闻</p></a>
+                                            <p>2020-02-08 14:34</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-index-info-parent">
+                                    <div class="story-info mt-story-info">
+                                        <p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">
+                                            新冠肺炎常见症状：目前既有发热、四肢无力、干咳等症状明显的病例，也有无上述症状的病例，或表现为其他系统症状如呕吐、腹泻、腹痛等消化系统症状。重症患者多为老人。
+
+                                           <br> 另外，新型冠状病毒感染的肺炎患者早期症状比较轻，一周左右病情开始进行性加重，疾病进展到第二周的时候病情最严重。
+
+                                            也就是说，第7天是个关键节点，潜伏期和重症表现都相关。如果发现自己在“感冒”之后，还出现了呼吸困难、呼吸急促的情况，就应当警惕。
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="story-content">
+                                <div class="mt-story-title js-story-title" story-data-show="true">
+                                    <p class="transition hour-arrow">
+                                        <span class="icon icon-caret js-mt-index-icon"></span>
+                                    </p>
+                                    <ul class="hour-head">
+                                        <li><a href="https://new.qq.com/omn/20200309/20200309A0E6JE00" target="_blank"><img class="hour-tx" src="https://mat1.gtimg.com/www/icon/favicon2.ico" alt="头像"></a></li>
+                                        <li>
+                                            <a href="https://new.qq.com/omn/20200309/20200309A0E6JE00" target="_blank"><p>腾讯网</p></a>
+                                            <p>2020-03-09  13:52</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-index-info-parent">
+                                    <div class="story-info mt-story-info">
+                                        <p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">
+                                            ECMO，中文名"体外膜肺氧合"，俗称“叶克膜”、“人工肺”，是一种医疗急救设备，用于对重症心肺功能衰竭患者提供持续的体外呼吸与循环，以维持患者生命。
+                                           <br> 对于“新冠”重症患者来说，由于ECMO可以对重症心肺功能衰竭患者进行长时间心肺支持，为危重症的抢救赢得宝贵的时间。可以说ECMO是目前针对严重心肺功能衰竭最核心的支持手段，也誉称为重症患者的“最后救命稻草”。
+                                           <br> ECMO的核心部分是膜肺和血泵，分别起人工肺和人工心的作用。运转时，在泵的推动下血液从静脉引出，通过膜肺吸收氧，排出二氧化碳。经过气体交换的血可回到静脉，也可回到动脉，前者主要用于体外呼吸支持，后者可以代替心脏的泵血功能。
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="story-content">
+                                <div class="mt-story-title js-story-title" story-data-show="true">
+                                    <p class="transition hour-arrow">
+                                        <span class="icon icon-caret js-mt-index-icon"></span>
+                                    </p>
+                                    <ul class="hour-head">
+                                        <li><a href="https://www.sohu.com/a/371014673_100170609" target="_blank"><img class="hour-tx" src="https://statics.itc.cn/web/static/images/pic/sohu-logo/favicon.ico" alt="头像"></a></li>
+                                        <li>
+                                            <a href="https://www.sohu.com/a/371014673_100170609" target="_blank"><p>搜狐新闻</p></a>
+                                            <p>2020-02-06 15:27</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-index-info-parent">
+                                    <div class="story-info mt-story-info">
+                                        <p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">
+                                            N95——是美国联邦法规42 CFR Part 84中由美国国家职业安全与卫生研究所（NIOSH）提出的概念，包括N、R、P三种系列，N系列即可阻隔非油性颗粒物的呼吸防护器具（包括口罩）。此外N系列口罩可用于防护颗粒物的场合、包括病毒等病原体传播的场合，但不意味着所有N95口罩都可用于防疫一线的医用防护；
+                                        <br>    KN 95——是国内劳保领域普及最广的标准GB 2626中的概念，标准中呼吸器（包括口罩）分为KN和KP系列，KN系列可阻隔非油性颗粒物，KP系列可阻隔油性和非油性颗粒物；
+                                         <br>   医用防护口罩——是目前国内医用领域要求最高的防护口罩，技术指标详见GB 19083，可用于高风险、高暴露的防疫一线医护人员和工作人员防护；
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。<a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。<a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。<a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。 <a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。<a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+<!--                        <li>-->
+<!--            				<div class="story-content">-->
+<!--                				<div class="mt-story-title js-story-title" story-data-show="true">-->
+<!--                    				<p class="transition hour-arrow">-->
+<!--                        				<span class="icon icon-caret js-mt-index-icon"></span>-->
+<!--                   					</p>-->
+<!--                    				<ul class="hour-head">-->
+<!--                        				<li><img class="hour-tx" src="sy-img/touxiang.jpg" alt="头像"></li>-->
+<!--                        				<li>-->
+<!--                            				<p>果然黑</p>-->
+<!--                            				<p>3分钟前</p>-->
+<!--                        				</li>-->
+<!--                    				</ul>-->
+<!--                				</div>-->
+<!--                				<div class="mt-index-info-parent">-->
+<!--                    				<div class="story-info mt-story-info">-->
+<!--                        				<p class="story-detail-hide hour-detail-hide mt-index-cont mt-index-cont2 js-mt-index-cont2">#苹果至少要等到2019年才能摆脱对三星的依赖#  作为苹果现有LCD显示屏长期的供货商，LG Display可做到2019年实现OLED显示屏的全面发货，明年年底可以实现少量的发货。目前，LG与苹果就一些协商预付款的细节问题讨论到最后阶段。<a href="#" target="_blank" class="mt-index-cont2-a">[&nbsp原文&nbsp]</a>-->
+<!--                                         </p>-->
+<!--                        				 <div class="mt-index-end">-->
+<!--                            			 	<div class="mt-index-realend">...</div>-->
+<!--                        				 </div>-->
+<!--                    				</div>-->
+<!--                				</div>-->
+<!--            				</div>-->
+<!--        				</li>-->
+					</ul>
+            	</div>
+
+            	<div class="nano-pane">
+                	<div class="nano-slider" style="height: 179px; transform: translate(0px, 0px);"></div>
+            	</div>
+        	</div>
+    	</div>
+    	<div class="js-more-moment" data-cur_page="0"></div>
+	</div>
+	<div class="placeholder"></div>
+<!--24小时部分结束1-->
+<!--	<div class="ad-wrap">-->
+<!--    	<div class="ad-title">广告</div>-->
+<!--    </div>-->
+    <div class="placeholder"></div>
+<!--传言-->
+<!--传言部分开始-->
+    <div id="rumor_center"></div>
+
+    <div class="box-moder moder-rumors-list">
+        <h3>天大担当</h3>
+        <span class="pull-right project-more story-more"><a href="news_campus.html" class="transition index-24-right js-index-24-right" target="_blank">查看全部</a></span>
+        <span class="span-mark"></span>
+        <div class="big2-pic pull-right">
+            <a href="#" class="back-img" target="_blank">
+                <img class="lazy" src="images/news/tianda.jpg" alt="">
+            </a>
+            <a href="layout/news_campus/article0.html" target="_blank">
+                <div class="big2-pic-content">
+                    <h2 class="t-h1" style="color: white;font-weight: bold" >天津大学全力打好疫情防控阻击战</h2>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <ul class="rumorlist">
+            <li>
+                <div class="icon-clock"><img src="images/clock.jpg"/></div>
+                <p class="rumor-time">2020-03-04</p>
+                <p class="rumor-detail"><a href="layout/news_campus/article0.html" target="_blank">天津大学认真贯彻落实习近平总书记关于坚决打赢疫情防控的人民战争...</a></p>
+            </li>
+        </ul>
+        <div class="rumor-more">
+            <p><a href="layout/news_campus/article0.html" target="_blank">详情>></a></p>
+        </div>
+
+
+        <span class="span-mark"></span>
+        <div class="big2-pic pull-right">
+            <a href="#" class="back-img" target="_blank">
+                <img class="lazy" src="images/news/tianda2.jpg" alt="">
+            </a>
+            <a href="layout/news_campus/article2.html" target="_blank">
+                <div class="big2-pic-content">
+                    <h2 class="t-h1" style="color: white;font-weight: bold" >战“疫”一线的天大人</h2>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <ul class="rumorlist">
+            <li>
+                <div class="icon-clock"><img src="images/clock.jpg"/></div>
+                <p class="rumor-time">2020-02-26</p>
+                <p class="rumor-detail"><a href="layout/news_campus/article2.html" target="_blank">曾经有这样一批人，怀着对健康事业的追求和梦想，选择了药学专业...</a></p>
+            </li>
+        </ul>
+        <div class="rumor-more">
+            <p><a href="layout/news_campus/article2.html" target="_blank">详情>></a></p>
+        </div>
+                    <!--24小时不展示此按钮-->
+<!--            <div class="rumor-brunt-box">-->
+<!--                <a class="btn btn-blue-cy js-update-cy transition  js-show-bruntback-box1" >我要爆料</a>-->
+<!--            </div>-->
+            </div>
+    <div class="placeholder"></div>
+    <!--传言部分结束-->
+<!--	<div class="ad-wrap">-->
+<!--    	<div class="ad-title">广告</div>-->
+<!--	</div>-->
+    <div class="placeholder"></div>
+    <div class="box-moder moder-project-list">
+        <h3>人物快报</h3>
+        <span class="pull-right project-more story-more"><a href="celebrity.html" class="transition index-24-right js-index-24-right" target="_blank">查看全部</a></span>
+        <span class="span-mark"></span>
+        <ul>
+            <li>
+                <div class="project-pic">
+                        <img src="images/celebrity/lidazhao.jpg">
+                </div>
+                <div class="project-content">
+                     <div class="project-title">
+                         <a href="layout/celebrity/lidazhao.html" class="transition" target="_blank">李大钊</a>
+                     </div>
+                     <p>中国共产党的创始人之一 </p>
+                 </div>
+            </li>
+           	<li>
+                <div class="project-pic">
+                        <img src="images/celebrity/caihesen.jpg">
+                </div>
+                <div class="project-content">
+                     <div class="project-title">
+                         <a href="layout/celebrity/caihesen.html" class="transition" target="_blank">蔡和森</a>
+                     </div>
+                     <p>中国共产党工人运动领袖</p>
+                 </div>
+            </li>
+            <li>
+                <div class="project-pic">
+                        <img src="images/celebrity/dongbiwu.jpg">
+                </div>
+                <div class="project-content">
+                     <div class="project-title">
+                         <a href="layout/celebrity/dongbiwu.html" class="transition" target="_blank">董必武</a>
+                     </div>
+                     <p>中国共产党的创始人之一</p>
+                 </div>
+            </li>
+            <li>
+                <div class="project-pic">
+                        <img src="images/celebrity/fangzhimin.jpg">
+                </div>
+                <div class="project-content">
+                     <div class="project-title">
+                         <a href="layout/celebrity/fangzhimin.html" class="transition" target="_blank">方志敏</a>
+                     </div>
+                     <p>伟大的共产主义战士</p>
+                 </div>
+            </li>
+            <li>
+                <div class="project-pic">
+                        <img src="images/celebrity/yeting.jpg">
+                </div>
+                <div class="project-content">
+                     <div class="project-title">
+                         <a href="layout/celebrity/yeting.html " class="transition" target="_blank">叶　挺</a>
+                     </div>
+                     <p>中国人民解放军创建人之一</p>
+                 </div>
+            </li>
+         </ul>
+<!--        <div class="project-btn-box">-->
+<!--            <a class="js-open-cy btn btn-blue-cy transition">立即报名，获得曝光机会！</a>-->
+<!--        </div>-->
+<!--        <ul class="project-info">-->
+<!--            <li>创业公司立即报名提交信息的好处：</li>-->
+<!--            <li>1.优质的展示和访谈机会</li>-->
+<!--            <li>2.获得投资人的关注</li>-->
+<!--            <li>3.虎嗅提供的创业支持服务</li>-->
+<!--        </ul>-->
+    </div>
+    <div class="placeholder"></div>
+    <div class="box-moder moder-project-list promote-box">
+        <h3>热点社评</h3>
+        <span class="span-mark"></span>
+        <span class="pull-right project-more story-more"><a href="news_political.html" class="transition index-24-right js-index-24-right" target="_blank">查看全部</a></span>
+        <ul>
+            <li>
+                <div class="mod-thumb">
+                     <a href="https://www.huanqiu.com/" target="_blank">
+                        <img src="images/logo/huanqiushibao.jpg">
+                     </a>
+                </div>
+                <div class="project-content">
+                     <a href="https://www.huanqiu.com/" class="c2" target="_blank">环球时报社评</a>
+                     <span class="point">&bull;</span>
+                     <a href="layout/news_political/article1.html" target="_blank">美对华舆论战不断翻新，中国扛得住</a>
+                </div>
+            </li>
+            <li>
+                <div class="mod-thumb">
+                    <a href="https://www.huanqiu.com/" target="_blank">
+                        <img src="images/logo/huanqiushibao.jpg">
+                    </a>
+                </div>
+                <div class="project-content">
+                    <a href="https://www.huanqiu.com/" class="c2" target="_blank">环球时报社评</a>
+                    <span class="point">&bull;</span>
+                    <a href="layout/news_political/article2.html" target="_blank">防疫形势难以支持美欧大规模复工</a>
+                </div>
+            </li>
+            <li>
+                <div class="mod-thumb">
+                    <a href="http://www.xinhuanet.com/" target="_blank">
+                        <img src="images/logo/xinhuashe.jpg">
+                    </a>
+                </div>
+                <div class="project-content">
+                    <a href="http://www.xinhuanet.com/" class="c2" target="_blank">新华国际时评</a>
+                    <span class="point">&bull;</span>
+                    <a href="layout/news_political/article3.html" target="_blank">新冠疫情下的“美国病”</a>
+                </div>
+            </li>
+            <li>
+                <div class="mod-thumb">
+                    <a href="http://www.people.com.cn/" target="_blank">
+                        <img src="images/logo/renminribao.jpg">
+                    </a>
+                </div>
+                <div class="project-content">
+                    <a href="http://www.people.com.cn/" class="c2" target="_blank">人民论坛</a>
+                    <span class="point">&bull;</span>
+                    <a href="layout/news_political/article4.html" target="_blank">永葆共产党人的先锋本色</a>
+                </div>
+            </li>
+            <li>
+                <div class="mod-thumb">
+                    <a href="https://www.huanqiu.com/" target="_blank">
+                        <img src="images/logo/huanqiushibao.jpg">
+                    </a>
+                </div>
+                <div class="project-content">
+                    <a href="https://www.huanqiu.com/" class="c2" target="_blank">环球时报社评</a>
+                    <span class="point">&bull;</span>
+                    <a href="layout/news_political/article5.html" target="_blank">军事强大且低调谦逊，这就是中国</a>
+                </div>
+            </li>
+         </ul>
+    </div>
+    <div class="placeholder"></div>
+
+
+<!--研究报告部分开始-->
+<!--    <div class="box-moder hot-article">-->
+<!--        <h3>创新案例</h3>-->
+<!--        <span class="pull-right project-more story-more">-->
+<!--            <a href="#" class="transition" target="_blank">全部</a></span>-->
+<!--        <span class="span-mark"></span>-->
+<!--        <ul>           -->
+<!--            <li>-->
+<!--            	<div class="hot-article-img">-->
+<!--                	<a href="#" target="_blank">-->
+<!--                   		<img src="sy-img/105108838520.jpg">-->
+<!--                	</a>-->
+<!--            	</div>-->
+<!--            	<a href="#" class="transition" target="_blank">【经济学人】比特币内战打响，加密货币走到分岔路口</a>-->
+<!--            	<div class="report-author-info" style="margin-left:0px;margin-top:0px;">-->
+<!--                	<span class="author-face">-->
+<!--                    	<img src="sy-img/97.jpg">-->
+<!--                	</span>-->
+<!--                	<span>虎嗅会员小秘书</span>-->
+<!--                	<div style="margin-left: 40px;margin-top: 5px;">微信号：huxiuvip302</div>-->
+<!--            	</div>-->
+<!--        	</li>-->
+<!--        </ul>-->
+<!--        <div class="report-explain">全年30+篇 案例分析，复盘有代表性的创新公司，还原商业成功背后的魔鬼细节。</div>-->
+<!--    </div>-->
+
+    <div class="placeholder"></div>
+    <div class="box-moder hot-article">
+        <h3>爱国文章</h3>
+        <span class="span-mark"></span>
+        <span class="pull-right project-more story-more"><a href="patriotic_knowledge.html" class="transition index-24-right js-index-24-right" target="_blank">查看全部</a></span>
+        <ul>
+            <li>
+                <div class="hot-article-img">
+                     <a href="layout/patriotic_knowledge/article7.html" target="_blank" title="五四运动在中共党史研究中的地位">
+                        <img src="images/patriotic_knowledge/article7.jpg">
+					 </a>
+                </div>
+                <a href="layout/patriotic_knowledge/article7.html" class="transition" target="_blank">五四运动在中共党史研究中的地位</a>
+            </li>
+            <li>
+                <div class="hot-article-img">
+                    <a href="layout/patriotic_knowledge/article8.html" target="_blank" title="“中国之治”的显著优势">
+                        <img src="images/patriotic_knowledge/article8.jpg">
+                    </a>
+                </div>
+                <a href="layout/patriotic_knowledge/article8.html" class="transition" target="_blank">“中国之治”的显著优势</a>
+            </li>
+            <li>
+                <div class="hot-article-img">
+                    <a href="layout/patriotic_knowledge/article9.html" target="_blank" title="进一步发挥人民代表大会制度优势">
+                        <img src="images/patriotic_knowledge/article9.jpg">
+                    </a>
+                </div>
+                <a href="layout/patriotic_knowledge/article9.html" class="transition" target="_blank">进一步发挥人民代表大会制度优势</a>
+            </li>
+            <li>
+                <div class="hot-article-img">
+                    <a href="layout/patriotic_knowledge/article10.html" target="_blank" title="“一国两制”具有深远历史意义">
+                        <img src="images/patriotic_knowledge/article10.jpg">
+                    </a>
+                </div>
+                <a href="layout/patriotic_knowledge/article10.html" class="transition" target="_blank">“一国两制”具有深远历史意义</a>
+            </li>
+<!--            <li>-->
+<!--                <div class="hot-article-img">-->
+<!--                     <a href="#" target="_blank" title="华谊：老了，还花心">-->
+<!--                        <img src="sy-img/105108838520.jpg">-->
+<!--					 </a>-->
+<!--                </div>-->
+<!--                <a href="#" class="transition" target="_blank">华谊：老了，还花心</a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <div class="hot-article-img">-->
+<!--                     <a href="#" target="_blank" title="华谊：老了，还花心">-->
+<!--                        <img src="sy-img/105108838520.jpg">-->
+<!--					 </a>-->
+<!--                </div>-->
+<!--                <a href="#" class="transition" target="_blank">华谊：老了，还花心</a>-->
+<!--            </li>-->
+            
+         </ul>
+    </div>
+    <div class="placeholder"></div>
+</div>
+</div>
+
+
+<footer class="footer">
+    <div class="modal-backdrop fade in js-modal-backdrop"></div>
+    <div class="container copy-right" >
+        <span >本站由  <a href="#">毛泽东思想和中国特色社会主义理论体系概论 小组</a> 负责维护 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维护意见邮箱 ： 3017218091@tju.edu.cn
+            <!--            &nbsp;<a href="#" target="_blank"><i class="i-wj"></i>京公网安备 11010102001402号</a>&nbsp;&nbsp;&nbsp;<em class="bull-right">本站由</em><i class="icon-aliyun" style="width: 70px;background-size: 100%;left: 7px;"></i><em class="bull-em">提供计算与安全服务</em>-->
+        </span>
+        <div class="footer-icon-list pull-right">
+            <ul class="Qr-codee">
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/weixin_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-wx"></i>
+                </li>
+                </a>
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/app_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-rss"></i></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+<script type="text/javascript" src="js/mouse.js"></script>
+
+</body>
+
+</html>

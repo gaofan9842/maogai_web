@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人中心-天大毛概</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="renderer" content="webkit">
+    <meta name="baidu-site-verification" content="R9XA5lWxu2" />
+     <link rel="shortcut icon" href="images/logo/logo.png" />
+    <meta name="keywords" content="天大毛概">
+    <meta name="description" content="天大毛概">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/build.css">
+    <link rel="stylesheet" type="text/css" href="css/activity.css">
+    <link href="css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="css/zzsc.css" rel="stylesheet" type="text/css"/>
+    <link href="css/dlzc.css" rel="stylesheet" type="text/css"/>
+    <script language="javascript" type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/main.js"></script>
+    <script language="javascript" type="text/javascript" src="js/popwin2.js"></script>
+</head>
+
+
+<body>
+<header id="top" role="banner" class="transition">
+
+    <div class="container">
+        <div class="navbar-header transition">
+            <a href="index.html" title="首页"><img src="images/logo/logo2.png" alt="天大毛概" title="首页" /></a>
+        </div>
+        <ul class="nav navbar-nav navbar-left" id="jsddm">
+            <li class="nav-news js-show-menu">
+                <a href="#">资讯 <span class="caret"></span></a>
+                <ul>
+                    <li><a href="news_political.html" target="_blank">热点社评</a></li>
+                    <!--                    <li><a href="#" target="_blank">疫情快讯</a></li>-->
+                    <li><a href="news_campus.html" target="_blank">校内快讯</a></li>
+                </ul>
+            </li>
+            <style>
+                #jsddm ul{position: absolute; visibility: hidden; background:#fff; width:250px;  top:60px; left:-50px; z-index:9999; box-shadow:0 1px 15px rgba(18,21,21,.2);padding:10px 5px;}
+                #jsddm ul li{ float:left; width:105px; padding-left:20px; line-height:40px;}
+            </style>
+            <!-- <li class="nav-news"><a href="#" target="_blank">正能量新闻<span class="nums-prompt nums-prompt-topic"></span></a></li> -->
+            <li class="nav-news"><a href="celebrity.html" target="_blank">爱国人物科普</a></li>
+            <li class="nav-news"><a href="patriotic_knowledge.html" target="_blank">爱国知识科普<span class="nums-prompt"></span></a></li>
+            <!-- <li class="nav-news"><a href="#" target="_blank">疫情快讯<em class="nums-prompt"></em></a></li> -->
+            <li class="nav-news"><a href="protection.html" target="_blank">疫情防护科普</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right transition  xiala main_nav">
+            <!-- <li class="app-guide js-app-guide" >
+              <div class="app-guide-box">
+                     <img src="images/1448211685.png">
+                     <div class="app-guide-title">
+                         <span>微信扫一扫</span><br>
+                         <span>下载虎嗅APP</span>
+                     </div>
+                 </div>
+                 <i class="icon icon-sm-phone"></i>APP下载<em class="guide-prompt"></em>
+             </li> -->
+            <!-- <li class="search-li js-show-search-box"><a><i class="icon icon-search "></i></a><span>搜索</span></li> -->
+            <!--            <li class="login-link-box"><a id="login_visible" class="cd-signin">登录</a></li>-->
+            <!--            <li ><a id="sign_visible" class="cd-signup" >注册</a></li>-->
+            <!--            <li ><a id="login_hidden" class="cd-signup" style="visibility: hidden" href="member.html" target="_blank">关于我</a></li>-->
+            <!--            <li><a class="cd-tougao">投稿</a></li>-->
+        </ul>
+    </div>
+    <div id="user_model" class="cd-user-modal">
+        <div class="cd-user-modal-container">
+            <div id="cd-login"> <!-- 登录表单 -->
+                <div class="modal-alert-title">登录虎嗅</div>
+                <div class="register" >
+                    <div class="register-top" id="reg-top"><i><a id="qrcode" href="#"></a></i></div>
+                    <div class="register-con" id="rc">
+                        <div class="login-form username-box " style="margin-top:52px;">
+                            <a class="js-open-sms-login sms-text">短信快捷登录</a>
+                            <label class="login-label transition" >
+                                <input id="login_username" class="login-input" placeholder="手机号／邮箱／虎嗅账号">
+                            </label>
+                            <label class="login-label">
+                                <input id="login_password" class="login-input password" type="password" placeholder="输入6～24位密码">
+                            </label>
+                            <a class="js-label-select label-select-box hide login-label-select text-center"><span class="js-country-user">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                            <!--						<div class="login-operation">-->
+                            <!--                			<label><input id="autologin" type="checkbox">&nbsp;2周内自动登录</label>-->
+                            <!--               				<a href="/user/reset_password" class="js-forget-passward pull-right">忘记密码</a>-->
+                            <!--            			</div>-->
+                            <button class="js-btn-login btn-login" onclick="login()">登&nbsp;录</button>
+                        </div>
+                        <!--        			<div class="js-open-register register-text">极速注册</div>-->
+                        <!--        			<div class="third-box">-->
+                        <!--            			<div class="title"><span>第三方登录</span></div>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-qq"></i></a>-->
+                        <!--            			<a class="js-login-switch"><i class="icon-modal icon-login-wx"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-wb"></i></a>-->
+                        <!--            			<a href="#"><i class="icon-modal icon-login-zfb"></i></a>-->
+                        <!--        			</div>-->
+                    </div>
+                </div>
+                <!--			<div class="saoma" id="sm">-->
+                <!--				<div class="qr-code" style="text-align:center">-->
+                <!--                    <div class="title">微信登录</div>-->
+                <!--					<div class="waiting panelContent">-->
+                <!--						<div class="wrp_code"><img class="qrcode lightBorder" src="images/150943753529.png"></div>-->
+                <!--						<div class="info">-->
+                <!--							<div class="status status_browser js_status" id="wx_default_tip">-->
+                <!--			                	<p>请使用微信扫描二维码登录</p>-->
+                <!--                            	<p>"天大毛概"</p>-->
+                <!--			           		 </div>-->
+                <!--						</div>-->
+                <!--					</div>-->
+                <!--                 </div>-->
+                <!--        		<div class="screen-tu" id="screen"></div>-->
+                <!--			</div>-->
+            </div>
+            <div id="cd_login"> <!-- 注册表单 -->
+                <div class="modal-alert-title">&nbsp;</div>
+                <div class="js-open-register register-text">极速注册</div>
+                <div class="user-register-box">
+                    <div class="login-form sms-box">
+
+                        <div class="geetest_login_sms_box" >
+                            <div id="profie" class="gt_holder gt_float" style="touch-action: none;">
+                            </div>
+                        </div>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_name" class="login-input username" placeholder="手机号"></label>
+                        <a class="js-label-select label-select-box text-center"><span class="js-country-sms">+86</span><i class="icon-modal icon-l-caret"></i></a>
+                        <label class="login-label col-xs-label transition"><input id="sms_username_pass" class="login-input username" placeholder="设置密码"></label>
+
+
+                        <button class="js-btn-sms-login btn-login" onclick="sign()">注&nbsp;册</button>
+                        <p class="card-text" id="sign_info"></p>
+                    </div>
+                    <!--				<div class="js-user-login register-text">已有账号，立即登录</div></div>-->
+                </div>
+                <!--			<a href="#0" class="cd-close-form ">关闭</a>-->
+            </div>
+        </div>
+    </div>
+
+
+
+</header>
+
+
+<div class="placeholder-height"></div>
+
+<h1 class="t-h1">活动-天大毛概</h1>
+<div class="container" id="activity">
+
+
+
+    <div class="nav-column">
+        <i class="icon2 icon-calendar"></i>爱国人物专栏
+    </div>
+    <div class="activity-list-warp">
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/maozedong.html" target="_blank">习近平谈怎样学习毛泽东</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/maozedong.html" target="_blank"><img src="images/celebrity/list_maozedong.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/maozedong.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/maozedong.html" target="_blank">习近平谈怎样学习毛泽东</a>
+                </div>
+                <div class="activity-content">
+                    毛泽东是中国共产党、中国人民解放军、中华人民共和国的主要缔造者，中国各族人民的伟大领袖。他是党的第一代中央领导集体的核心，是领导中国人民彻底改变自己命运和国家面貌的一代伟人。
+                </div>
+            </div>
+        </section>
+
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/dengxiaoping.html" target="_blank">邓小平论弘扬斗争精神</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/dengxiaoping.html" target="_blank"><img src="images/celebrity/dengxiaoping.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/dengxiaoping.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/dengxiaoping.html" target="_blank">邓小平论弘扬斗争精神</a>
+                </div>
+                <div class="activity-content">
+                    作为中国共产党第二代中央领导集体的核心，邓小平在领导开创中国特色社会主义的伟大斗争中，紧密结合时代特点和中国实际，从坚定不移走中国特色社会主义道路、发扬敢闯敢冒精神推进改革开放、坚持党的基本路线不动摇、反对官僚主义和特权现象、坚持“一国两制”维护祖国统一、维护世界和平反对霸权主义等国内国际两个大局的多个维度，深刻指明了弘扬斗争精神的重大现实意义和深远时代价值。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/zhouenlai.html" target="_blank">弘扬周恩来精神 践行初心使命</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/zhouenlai.html" target="_blank"><img src="images/celebrity/list_zhouenlai.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/zhouenlai.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/zhouenlai.html" target="_blank">弘扬周恩来精神 践行初心使命</a>
+                </div>
+                <div class="activity-content">
+                    周恩来同志是中国共产党人的杰出代表、党政干部学习的崇高榜样。在半个多世纪的革命生涯中，周恩来同志始终坚定理想信念，对党绝对忠诚，牢记为民宗旨，为党和人民的事业鞠躬尽瘁，体现了中国共产党人的高风亮节和崇高境界，他奋斗的一生是我们党不忘初心、牢记使命的生动缩影。
+                    <!--                    <br>1925年5月15日，上海日本棉纱厂发生了一起枪杀工人顾正红的事件，激起了群众的强烈愤慨。在革命斗争的关键时刻，蔡和森毫不犹豫地站了出来。他和刘少奇等同志，一方面深入群众之中组织领导罢工活动，另一方面广泛发动各界声援，形成大规模的群众性反帝爱国运动。-->
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/dongbiwu.html" target="_blank">董必武：中国共产党的创始人之一</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/dongbiwu.html" target="_blank"><img src="images/celebrity/list_dongbiwu.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/dongbiwu.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/dongbiwu.html" target="_blank">董必武：中国共产党的创始人之一</a>
+                </div>
+                <div class="activity-content">
+                    　董必武，生于1886年，湖北省红安县人，是中国共产党的创始人之一。1911年参加辛亥革命。1914年考入日本东京“私立日本大学”学习法律，在日本加入孙中山创建的中华革命党。1915年6月回国从事反袁活动，两次被捕入狱。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/fangzhimin.html" target="_blank">方志敏：伟大的共产主义战士</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/fangzhimin.html" target="_blank"><img src="images/celebrity/list_fangzhimin.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/fangzhimin.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/fangzhimin.html" target="_blank">方志敏：伟大的共产主义战士</a>
+                </div>
+                <div class="activity-content">
+                    　　“敌人只能砍下我们的头颅，决不能动摇我们的信仰！因为我们信仰的主义，乃是宇宙的真理！为着共产主义牺牲，为着苏维埃流血，那是我们十分情愿的啊！”
+
+                   <br> 　　当我们吟诵方志敏的不朽诗篇，无不为这位伟大的共产主义战士对党和革命事业的赤胆忠心而肃然起敬。建的中华革命党。1915年6月回国从事反袁活动，两次被捕入狱。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/leifeng.html" target="_blank">像雷锋那样践行初心使命</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/leifeng.html" target="_blank"><img src="images/celebrity/leifeng.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/leifeng.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/leifeng.html" target="_blank">像雷锋那样践行初心使命</a>
+                </div>
+                <div class="activity-content">
+                    　　在“不忘初心、牢记使命”主题教育总结大会上，习近平总书记强调：“不忘初心、牢记使命，必须作为加强党的建设的永恒课题和全体党员、干部的终身课题常抓不懈。”雷锋一生都在践行我们党全心全意为人民服务的根本宗旨，实际上也是在践行我们党为中国人民谋幸福、为中华民族谋复兴的初心和使命。
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/lidazhao.html" target="_blank">李大钊：中国共产党的创始人之一</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/lidazhao.html" target="_blank"><img src="images/celebrity/list_lidazhao.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/lidazhao.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/lidazhao.html" target="_blank">李大钊：中国共产党的创始人之一</a>
+                </div>
+                <div class="activity-content">
+                    　北京香山万安公墓内的李大钊烈士陵园，是根据中共中央的决定修建的。在墓碑上有中共中央撰写的碑文。碑文指出：李大钊同志是中国最早的马克思主义者和共产主义者，是中国共产党的主要创始人之一。他对中国人民的解放事业，对马克思主义的信仰和无产阶级的革命前途无限忠诚。他为在我国开创和发展共产主义运动的大无畏的献身精神，永远是一切革命者的光辉典范。
+                </div>
+            </div>
+        </section>
+
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/caihesen.html" target="_blank">蔡和森：中国共产党工人运动领袖</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/caihesen.html" target="_blank"><img src="images/celebrity/list_caihesen.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/caihesen.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/caihesen.html" target="_blank">蔡和森：中国共产党工人运动领袖</a>
+                </div>
+                <div class="activity-content">
+                    　蔡和森生于1895年，是我党早期卓越的领导人和工人运动领袖，1931年8月被国民党反动派杀害，年仅36岁。
+                    <!--                    <br>1925年5月15日，上海日本棉纱厂发生了一起枪杀工人顾正红的事件，激起了群众的强烈愤慨。在革命斗争的关键时刻，蔡和森毫不犹豫地站了出来。他和刘少奇等同志，一方面深入群众之中组织领导罢工活动，另一方面广泛发动各界声援，形成大规模的群众性反帝爱国运动。-->
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/yeting.html" target="_blank">叶　挺：中国人民解放军创建人之一</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/yeting.html" target="_blank"><img src="images/celebrity/list_yeting.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/yeting.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/yeting.html" target="_blank">叶　挺：中国人民解放军创建人之一</a>
+                </div>
+                <div class="activity-content">
+                    叶挺是中国人民解放军的创建人和新四军领导人，杰出的军事家。1896年出生于广东归善（今惠阳）一个农民家庭。早年追随孙中山参加革命，参加援‍‍闽粤军。1924年被派赴苏联莫斯科东方劳动者共产主义大学和红军学校中国班学习。同年10月加入中国社会主义青年团，12月转入中国共产党。
+                    <!--                    <br>1925年5月15日，上海日本棉纱厂发生了一起枪杀工人顾正红的事件，激起了群众的强烈愤慨。在革命斗争的关键时刻，蔡和森毫不犹豫地站了出来。他和刘少奇等同志，一方面深入群众之中组织领导罢工活动，另一方面广泛发动各界声援，形成大规模的群众性反帝爱国运动。-->
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/zhangtailei.html" target="_blank">张太雷革命精神初探 ——兼论“常州三杰”的人生观</a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/zhangtailei.html" target="_blank"><img src="images/celebrity/zhangtailei.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/zhangtailei.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/zhangtailei.html" target="_blank">张太雷革命精神初探 ——兼论“常州三杰”的人生观</a>
+                </div>
+                <div class="activity-content">
+                    综观张太雷29岁短暂的人生历程，由于有崇高真挚的理想信念支撑着他，使其生命虽然短暂却熠熠生辉。从张太雷一生创造的革命业绩来看，他的理想就是人类要实现共产主义，信念就是坚信马克思主义。
+                    <!--                    <br>1925年5月15日，上海日本棉纱厂发生了一起枪杀工人顾正红的事件，激起了群众的强烈愤慨。在革命斗争的关键时刻，蔡和森毫不犹豫地站了出来。他和刘少奇等同志，一方面深入群众之中组织领导罢工活动，另一方面广泛发动各界声援，形成大规模的群众性反帝爱国运动。-->
+                </div>
+            </div>
+        </section>
+
+        <section class="transition">
+            <div class="review-past-warp">
+                <div class="activity-name"><a href="layout/celebrity/zhongnanshan.html" target="_blank">钟南山:最在乎的永远是病人 </a></div>
+                <div class="review-list"></div>
+            </div>
+
+            <div class="activity-pic">
+                <a href="layout/celebrity/zhongnanshan.html" target="_blank"><img src="images/celebrity/zhongnanshan.jpg"></a>
+            </div>
+
+            <div class="activity-content-warp">
+                <!--立即报名、立即购票的样式-->
+                <a href="layout/celebrity/zhongnanshan.html" target="_blank" class="activity-type pull-right">查看全文</a>
+
+                <div class="activity-name">
+                    <a href="layout/celebrity/zhongnanshan.html" target="_blank">钟南山:最在乎的永远是病人 </a>
+                </div>
+                <div class="activity-content">
+                    2003年,非典肆虐,67岁的他说:“把病情最重的病人送到我们这里来!”
+
+                    <br>2020年,新型冠状病毒感染的肺炎爆发,84岁的他一边告诉公众“尽量不要去武汉”,一边自己登上去武汉的高铁,挂帅出征。
+                    <!--                    <br>1925年5月15日，上海日本棉纱厂发生了一起枪杀工人顾正红的事件，激起了群众的强烈愤慨。在革命斗争的关键时刻，蔡和森毫不犹豫地站了出来。他和刘少奇等同志，一方面深入群众之中组织领导罢工活动，另一方面广泛发动各界声援，形成大规模的群众性反帝爱国运动。-->
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<footer class="footer">
+    <div class="modal-backdrop fade in js-modal-backdrop"></div>
+    <div class="container copy-right" >
+        <span >本站由  <a href="#">毛泽东思想和中国特色社会主义理论体系概论 小组</a> 负责维护 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;维护意见邮箱 ： 3017218091@tju.edu.cn
+            <!--            &nbsp;<a href="#" target="_blank"><i class="i-wj"></i>京公网安备 11010102001402号</a>&nbsp;&nbsp;&nbsp;<em class="bull-right">本站由</em><i class="icon-aliyun" style="width: 70px;background-size: 100%;left: 7px;"></i><em class="bull-em">提供计算与安全服务</em>-->
+        </span>
+        <div class="footer-icon-list pull-right">
+            <ul class="Qr-codee">
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/weixin_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-wx"></i>
+                </li>
+                </a>
+                <a><li class="Qr-code-footer">
+                    <div class="app-qrcode"><img src="images/app_erweima.png"></div>
+                    <i class="icon icon-footer icon-footer-rss"></i></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+<script type="text/javascript" src="js/mouse.js"></script>
+</body>
+</html>
